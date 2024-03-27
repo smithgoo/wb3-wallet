@@ -3,6 +3,10 @@ import 'package:ether_dart/ether_dart.dart';
 import 'package:web3_wallet/common/widgets/widgets.dart'; // 导入 http 包
 
 class WalletManager {
+  static const ethmainNet =
+      "https://mainnet.infura.io/v3/3e956d2601264ce78cd5be274128c04f";
+  static const starknetNet =
+      "https://starknet-alpha.infura.io/v3/3e956d2601264ce78cd5be274128c04f";
   //生成助记词
   static createMemonicWord() {
     final etherDart = EtherDart();
@@ -43,8 +47,7 @@ class WalletManager {
 
   //获取地址上的余额
   static getBalance(String addresst) async {
-    const myHost =
-        "https://mainnet.infura.io/v3/3e956d2601264ce78cd5be274128c04f";
+    const myHost = starknetNet;
     var httpClient = Client();
     var ethClient = Web3Client(myHost, httpClient);
     var credentials = EthPrivateKey.fromHex(addresst);
@@ -59,8 +62,7 @@ class WalletManager {
     final etherDart = EtherDart();
 
     /// 这是我的 RpcHost - 你也可以使用 QuickNode 来创建
-    const myHost =
-        "https://mainnet.infura.io/v3/3e956d2601264ce78cd5be274128c04f";
+    const myHost = starknetNet;
 
     /// 连接以太坊到提供者
     /// 在这种情况下，客户端是一个 HTTP 客户端（用于向你的 Rpc 主机发送请求）
@@ -89,8 +91,7 @@ class WalletManager {
   //转账汇款
   static sendTransaction(
       String fromAddress, String toAddress, String amount) async {
-    const myHost =
-        "https://mainnet.infura.io/v3/3e956d2601264ce78cd5be274128c04f";
+    const myHost = starknetNet;
     var ethClient = Web3Client(myHost, Client());
 
     var credentials = EthPrivateKey.fromHex(fromAddress);
