@@ -32,7 +32,7 @@ class WelcomeController extends GetxController {
     if (pwd == passwordController.text) {
       Get.offAndToNamed(AppRoutes.HOME);
     } else {
-      AlertStyle.showAlertError(
+      AlertLocalStyle.showAlertError(
         null,
         "Error",
         "Passwords is incorrect",
@@ -41,7 +41,7 @@ class WelcomeController extends GetxController {
   }
 
   showPwdSetView(context) {
-    AlertStyle.showPwdComparView(context, (pwd) async {
+    AlertLocalStyle.showPwdComparView(context, (pwd) async {
       var status = await StorageService.to.setString("pwd", pwd);
       Get.offAndToNamed(AppRoutes.HOME);
     });

@@ -1,13 +1,21 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:web3_wallet/WalletManager.dart';
 import 'package:web3_wallet/common/utils/utils.dart';
-
+import '../../alertStyle.dart';
 import 'index.dart';
 
 class HomeController extends GetxController {
   HomeController();
 
   final state = HomeState();
+
+  late BuildContext context;
+
+  void init(BuildContext context) {
+    this.context = context;
+  }
 
   /// 在 widget 内存中分配后立即调用。
   @override
@@ -19,6 +27,15 @@ class HomeController extends GetxController {
   @override
   void onReady() {
     super.onReady();
+    showWalletChoice();
+  }
+
+  showWalletChoice() {
+    print("12312312312");
+    AlertLocalStyle.showWalletChoiceView(null, (type) {
+      if (type == 1) {
+      } else if (type == 2) {}
+    });
   }
 
   /// 在 [onDelete] 方法之前调用。

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
-class AlertStyle {
+class AlertLocalStyle {
   static showPwdComparView(context, callBack) {
     TextEditingController pwdController = TextEditingController();
     TextEditingController pwdConfirmController = TextEditingController();
@@ -38,7 +38,7 @@ class AlertStyle {
                 }
               else
                 {
-                  AlertStyle.showAlertError(
+                  AlertLocalStyle.showAlertError(
                       context, "Error", "Passwords do not match"),
                 }
             },
@@ -62,5 +62,34 @@ class AlertStyle {
         )
       ],
     ).show();
+  }
+
+  static showWalletChoiceView(context, callBack) {
+    Alert(
+        context: context,
+        title: "Create or Import Wallet",
+        content: Container(),
+        buttons: [
+          DialogButton(
+            onPressed: () => {
+              callBack(1),
+              Navigator.pop(context),
+            },
+            child: const Text(
+              "Create a new wallet",
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+          ),
+          DialogButton(
+            onPressed: () => {
+              callBack(2),
+              Navigator.pop(context),
+            },
+            child: const Text(
+              "Input memonic phrase",
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+          ),
+        ]).show();
   }
 }
