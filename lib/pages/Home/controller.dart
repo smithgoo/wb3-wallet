@@ -34,7 +34,12 @@ class HomeController extends GetxController {
     print("12312312312");
     AlertLocalStyle.showWalletChoiceView(null, (type) {
       if (type == 1) {
-      } else if (type == 2) {}
+        // 生成助记词 生成钱包
+      } else if (type == 2) {
+        // 导入助记词 导入钱包
+      } else if (type == 3) {
+        // 导入私钥 导入钱包
+      }
     });
   }
 
