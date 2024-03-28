@@ -3,10 +3,10 @@ import 'package:ether_dart/ether_dart.dart';
 import 'package:web3_wallet/common/widgets/widgets.dart'; // 导入 http 包
 
 class WalletManager {
-  static const ethmainNet =
-      "https://mainnet.infura.io/v3/3e956d2601264ce78cd5be274128c04f";
   static const starknetNet =
-      "https://starknet-alpha.infura.io/v3/3e956d2601264ce78cd5be274128c04f";
+      "https://mainnet.infura.io/v3/3e956d2601264ce78cd5be274128c04f";
+  // static const starknetNet =
+  //     "https://starknet-alpha.infura.io/v3/3e956d2601264ce78cd5be274128c04f";
   //生成助记词
   static createMemonicWord() {
     final etherDart = EtherDart();

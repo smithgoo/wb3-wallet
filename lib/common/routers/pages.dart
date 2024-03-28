@@ -3,6 +3,7 @@ import 'package:web3_wallet/common/middlewares/middlewares.dart';
 import 'package:web3_wallet/pages/Home/bindings.dart';
 import 'package:web3_wallet/pages/Home/view.dart';
 import 'package:get/get.dart';
+import 'package:web3_wallet/pages/Welcome/index.dart';
 
 import 'routes.dart';
 
@@ -15,6 +16,11 @@ class AppPages {
   static final List<GetPage> routes = [
     GetPage(
       name: AppRoutes.INITIAL,
+      page: () => WelcomePage(),
+      binding: WelcomeBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.HOME,
       page: () => HomePage(),
       binding: HomeBinding(),
     ),

@@ -20,7 +20,7 @@ class HomePage extends GetView<HomeController> {
     return GetBuilder<HomeController>(
       builder: (_) {
         return Scaffold(
-          appBar: AppBar(title: const Text("home")),
+          appBar: AppBar(title: const Text("")),
           body: SafeArea(
             child: Column(
               children: [
