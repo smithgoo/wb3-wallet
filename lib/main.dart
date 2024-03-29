@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(540, 960),
+      designSize: const Size(720, 1280),
       builder: (context, child) => GetMaterialApp(
         title: 'Wallet_Crypto',
         theme: AppTheme.light,
