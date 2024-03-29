@@ -5,7 +5,7 @@ import 'index.dart';
 import 'widgets/widgets.dart';
 
 class LoginPage extends GetView<LoginController> {
-  const LoginPage({Key? key}) : super(key: key);
+  final controller = Get.put<LoginController>(LoginController());
 
   // 主视图
   Widget _buildView() {

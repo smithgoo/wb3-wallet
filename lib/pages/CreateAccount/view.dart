@@ -15,7 +15,10 @@ class CreateaccountPage extends GetView<CreateaccountController> {
         return Scaffold(
           backgroundColor: Colors.blue[400],
           appBar: AppBar(
-            title: const Text(""),
+            title: const Text(
+              "Create An Account",
+              style: TextStyle(color: Colors.white),
+            ),
             backgroundColor: Colors.blue[400],
           ),
           body: SafeArea(

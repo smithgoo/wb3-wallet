@@ -6,6 +6,7 @@ import 'package:web3_wallet/pages/Home/view.dart';
 import 'package:get/get.dart';
 import 'package:web3_wallet/pages/Launch/index.dart';
 import 'package:web3_wallet/pages/Launch/view.dart';
+import 'package:web3_wallet/pages/Login/index.dart';
 import 'package:web3_wallet/pages/Welcome/index.dart';
 
 import 'routes.dart';
@@ -37,6 +38,11 @@ class AppPages {
       name: AppRoutes.CREATEACCOUNT,
       page: () => CreateaccountPage(),
       binding: CreateaccountBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.LOGIN,
+      page: () => LoginPage(),
+      binding: LoginBinding(),
     ),
 
     //

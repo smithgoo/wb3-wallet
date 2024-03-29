@@ -86,7 +86,9 @@ class LaunchPage extends GetView<LaunchController> {
                 ),
                 TextButton(
                   style: TextButton.styleFrom(),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(AppRoutes.LOGIN);
+                  },
                   child: const Text(
                     "Sign In",
                     style: TextStyle(fontSize: 18.0, color: Colors.white),
